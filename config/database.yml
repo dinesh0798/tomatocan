@@ -1,0 +1,19 @@
+default: &default
+  adapter: postgresql
+  pool: 5
+  timeout: 5000
+
+development:
+  <<: *default
+  encoding: unicode
+  database: d_intern_db
+  username: dineshreddy
+
+test:
+  <<: *default
+  encoding: unicode
+  database: t_intern_db
+  username:dineshreddy
+
+production:
+  <<: *default
